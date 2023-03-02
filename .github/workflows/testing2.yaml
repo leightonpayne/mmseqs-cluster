@@ -1,3 +1,9 @@
+name: Testing2
+
+on:
+  push:
+  pull_request:
+
 jobs:
   create-env:
     name: ${{ matrix.os }} 
