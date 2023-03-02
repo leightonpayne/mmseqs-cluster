@@ -1,0 +1,14 @@
+name: 'CI'
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - master
+  pull_request:
+
+jobs:
+  call-ci-test-snakemake:
+    uses: ./.github/workflows/ci-test-snakemake.yaml
+  call-ci-test-snakedeploy:
+    uses: ./.github/workflows/ci-test-snakedeploy.yaml

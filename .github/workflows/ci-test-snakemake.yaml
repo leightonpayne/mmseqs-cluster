@@ -1,8 +1,7 @@
-name: Testing2
+name: 'CI - Test Snakemake'
 
 on:
-  push:
-  pull_request:
+  workflow_call:
 
 jobs:
   create-env:

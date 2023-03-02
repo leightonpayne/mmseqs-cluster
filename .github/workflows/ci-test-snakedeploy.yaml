@@ -1,0 +1,41 @@
+name: 'CI - Test Snakedeploy'
+
+on:
+  workflow_call:
+
+jobs:
+  create-env:
+    name: ${{ matrix.os }} 
+    runs-on: ${{ matrix.os }}
+    defaults:
+      run:
+        shell: bash -l {0}
+
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Create environment with mamba
+        uses: conda-incubator/setup-miniconda@v2.2.0
+        with:
+          mamba-version: "*"
+          channels: conda-forge,bioconda,defaults
+          auto-activate-base: false
+          activate-environment: snakedeploy
+          environment-file: .test/envs/snakedeploy.yaml
+
+      - name: Run snakedeploy
+        run: |
+          mkdir -p deploy
+          cd deploy
+          snakedeploy deploy-workflow https://github.com/leightonpayne/mmseqs-cluster . --branch master
+
+      - name: Run snakemake
+        run: |
+          snakemake --directory ../.test --snakefile workflow/Snakefile --cores 2 --show-failed-logs --use-conda --conda-cleanup-pkgs cache
+
