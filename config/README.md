@@ -14,7 +14,7 @@ Any additional columns can be added to `config/samples.csv` for metadata trackin
 
 # Example data
 
-Example data is provided in the workflow repository under `test/`.
+Example data is provided in the workflow repository under `.test/`.
 
 If the workflow was deployed using `snakedeploy` this data can be retrieved using Subversion, or by visiting the repository and downloading the directory:
 
@@ -30,7 +30,7 @@ If you deployed from the master branch:
 svn export https://github.com/leightonpayne/mmseqs-cluster/branches/master/.test/
 ```
 
-To run the worflow on the example data, simply run:
+To run the workflow on the example data, simply run:
 
 ```bash
 snakemake --cores all --use-conda
