@@ -21,3 +21,5 @@ jobs:
           directory: '.test'
           snakefile: 'workflow/Snakefile'
           args: '--cores 2 --show-failed-logs --use-conda --conda-cleanup-pkgs cache'
+          stagein: 'conda install eido'
+
