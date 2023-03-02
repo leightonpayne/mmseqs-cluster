@@ -32,10 +32,11 @@ jobs:
       - name: Run snakedeploy
         run: |
           mkdir -p deploy
+          cp -r .test/ deploy/
           cd deploy
           snakedeploy deploy-workflow https://github.com/leightonpayne/mmseqs-cluster . --branch master
 
       - name: Run snakemake
         run: |
-          snakemake --directory ../.test --snakefile workflow/Snakefile --cores 2 --show-failed-logs --use-conda --conda-cleanup-pkgs cache
+          snakemake --cores 2 --show-failed-logs --use-conda --conda-cleanup-pkgs cache
 
