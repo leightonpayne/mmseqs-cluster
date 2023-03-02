@@ -28,6 +28,10 @@ include: "rules/cluster.smk"
 rule all:
     input:
         expand(
+            "results/clusters/{protein}/{protein}.tsv",
+            protein=pep.sample_table["protein_name"],
+        ),
+        expand(
             "results/database_clusters/{protein}/{protein}_clu_seq.db",
             protein=pep.sample_table["protein_name"],
         ),
