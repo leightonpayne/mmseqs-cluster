@@ -29,14 +29,17 @@ cd mmseqs-cluster
 Deploy the workflow:
 
 ```bash
-snakedeploy deploy-workflow https://github.com/leightonpayne/mmseqs-cluster .
+# Check what versions are available (requires 'gh')
+gh release list --repo leightonpayne/mmseqs-cluster
+# Deploy a specific version
+snakedeploy deploy-workflow https://github.com/leightonpayne/mmseqs-cluster . --tag v1.0.0
 ```
 
 ## Configuration
 
 This workflow uses the [PEP](https://pep.databio.org/en/latest/), or *Portable Encapsulated Projects* specification for defining input and recording metadata.
 
-The paths to each input file need to be added to `config/input_metadata.csv`. The columns `protein_name` and `file_path` must be defined. An example is given to run the workflow on the test data provided.
+Read [`config/README.md`](https://github.com/leightonpayne/mmseqs-cluster/config/README.md) for configuration instructions.
 
 ## Usage
 
