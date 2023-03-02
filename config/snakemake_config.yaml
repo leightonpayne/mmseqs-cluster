@@ -1,0 +1,5 @@
+# Parameters for clustering with MMseqs2.
+mmseqs_cluster:
+  min_seq_id: 0.3
+  coverage: 0.8
+  threads: 4

@@ -1,0 +1,33 @@
+# set min snakemake version
+
+from snakemake.utils import min_version
+
+min_version("7.19.1")
+
+# load configuration
+
+
+configfile: "config/snakemake_config.yaml"
+
+
+pepfile: "config/pep_config.yaml"
+
+
+pepschema: "schemas/pep.yaml"
+
+
+# load rules
+
+
+include: "rules/cluster.smk"
+
+
+# targets
+
+
+rule all:
+    input:
+        expand(
+            "results/database_clusters/{protein}/{protein}_clu_seq.db",
+            protein=pep.sample_table["protein_name"],
+        ),

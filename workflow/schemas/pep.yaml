@@ -1,0 +1,22 @@
+description: A example schema for a pipeline.
+imports:
+  - http://schema.databio.org/pep/2.1.0.yaml
+properties:
+  samples:
+    type: array
+    items:
+      type: object
+      properties:
+        protein_name:
+          type: string
+          description: "Protein name"
+        file_path:
+          type: string
+          description: "Path to protein FASTA file"
+      required:
+        - protein_name
+        - file_path
+      required_files:
+        - file_path
+required:
+  - samples
