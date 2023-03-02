@@ -2,7 +2,6 @@
 
 ![License](https://img.shields.io/badge/License-MIT-blue.svg)
 [![Snakemake](https://img.shields.io/badge/snakemake-7.19.1-brightgreen.svg?style=flat)](https://snakemake.readthedocs.io)
-[![GitHub Super-Linter](https://github.com/leightonpayne/mmseqs-cluster/workflows/Lint%20Code%20Base/badge.svg)](https://github.com/marketplace/actions/super-linter)
 [![Code style: snakefmt](https://img.shields.io/badge/code%20style-snakefmt-000000.svg)](https://github.com/snakemake/snakefmt)
 
 A Snakemake workflow to cluster proteins using MMseqs2.
@@ -33,7 +32,7 @@ Deploy the workflow:
 # Check what versions are available (requires 'gh')
 gh release list --repo leightonpayne/mmseqs-cluster
 # Deploy a specific version
-snakedeploy deploy-workflow https://github.com/leightonpayne/mmseqs-cluster . --tag v1.0.0
+snakedeploy deploy-workflow https://github.com/leightonpayne/mmseqs-cluster . --tag v0.0.9000
 ```
 
 ## Configuration
