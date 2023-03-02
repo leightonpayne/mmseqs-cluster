@@ -26,13 +26,22 @@ mkdir -p mmseqs-cluster
 cd mmseqs-cluster
 ```
 
-Deploy the workflow:
+Deploy a specific release (recommended):
 
 ```bash
-# Check what versions are available (requires 'gh')
+# Check what releases are available (e.g. using the GitHub CLI or Subversion)
 gh release list --repo leightonpayne/mmseqs-cluster
-# Deploy a specific version
-snakedeploy deploy-workflow https://github.com/leightonpayne/mmseqs-cluster . --tag v0.0.9000
+svn ls https://github.com/leightonpayne/mmseqs-cluster/tags/
+```
+
+```bash
+snakedeploy deploy-workflow https://github.com/leightonpayne/mmseqs-cluster . --tag <RELEASE>
+```
+
+Deploy the development version (optional):
+
+```bash
+snakedeploy deploy-workflow https://github.com/leightonpayne/mmseqs-cluster . --branch master
 ```
 
 ## Configuration
@@ -48,4 +57,5 @@ To run the workflow, navigate to the base directory and run the command:
 ```bash
 snakemake --cores all --use-conda
 ```
+
 

@@ -18,10 +18,16 @@ Example data is provided in the workflow repository under `test/`.
 
 If the workflow was deployed using `snakedeploy` this data can be retrieved using Subversion, or by visiting the repository and downloading the directory:
 
+If you deployed a specific release run:
+
 ```bash
-# To ensure compatibility, make sure you download the right version of example 
-# data i.e. the same version as the workflow you deployed.
-svn export https://github.com/leightonpayne/mmseqs-cluster/tags/v0.0.9000/.test
+svn export https://github.com/leightonpayne/mmseqs-cluster/tags/<RELEASE>/.test/
+```
+
+If you deployed from the master branch:
+
+```bash
+svn export https://github.com/leightonpayne/mmseqs-cluster/branches/master/.test/
 ```
 
 To run the worflow on the example data, simply run:
