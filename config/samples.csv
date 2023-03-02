@@ -1,4 +1,4 @@
 protein_name,file_path
-group_01,test/group_01.faa
-group_02,test/group_02.faa
-group_03,test/group_03.faa
+group_01,.test/group_01.faa
+group_02,.test/group_02.faa
+group_03,.test/group_03.faa

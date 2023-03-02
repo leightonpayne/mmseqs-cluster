@@ -1,0 +1,9 @@
+# Parameters for clustering with MMseqs2.
+mmseqs_cluster:
+  # --min-seq-id; List matches above this sequence identity (for clustering)
+  # (range 0.0-1.0).
+  min_seq_id: 0.3
+  # -c; List matches above this fraction of aligned (covered) residues.
+  coverage: 0.8
+  # --threads; Number of CPU-cores used.
+  threads: 2 

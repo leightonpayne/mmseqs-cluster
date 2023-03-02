@@ -21,7 +21,7 @@ If the workflow was deployed using `snakedeploy` this data can be retrieved usin
 ```bash
 # To ensure compatibility, make sure you download the right version of example 
 # data i.e. the same version as the workflow you deployed.
-svn export https://github.com/leightonpayne/mmseqs-cluster/tags/v0.0.9000/test
+svn export https://github.com/leightonpayne/mmseqs-cluster/tags/v0.0.9000/.test
 ```
 
 To run the worflow on the example data, simply run:
