@@ -3,7 +3,7 @@
 [![Snakemake](https://img.shields.io/badge/snakemake-7.19.1-brightgreen.svg?style=flat)](https://snakemake.readthedocs.io)
 ![License](https://img.shields.io/badge/License-MIT-blue.svg)
 [![Code style: snakefmt](https://img.shields.io/badge/code%20style-snakefmt-000000.svg)](https://github.com/snakemake/snakefmt)
-[![CI](https://github.com/leightonpayne/mmseqs-cluster/actions/workflows/ci.yaml/badge.svg)](https://github.com/leightonpayne/mmseqs-cluster/actions/workflows/ci.yml)
+[![CI](https://github.com/leightonpayne/mmseqs-cluster/actions/workflows/ci.yaml/badge.svg)](https://github.com/leightonpayne/mmseqs-cluster/actions/workflows/ci.yaml)
 
 A Snakemake workflow to cluster proteins using MMseqs2.
 
