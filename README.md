@@ -8,13 +8,28 @@ A Snakemake workflow to cluster proteins using MMseqs2.
 
 ## Installation
 
-### Conda (recommended)
+### Conda and Snakedeploy (recommended)
+
+Install dependencies with conda:
 
 ```bash
 # Install snakemake, snakedeploy, and eido in a new conda environment
 conda create -c conda-forge -c bioconda --name snakemake snakemake snakedeploy eido
 # Activate the environment
 conda activate snakemake
+```
+
+Create a project directory for running the workflow:
+
+```bash
+mkdir -p mmseqs-cluster
+cd mmseqs-cluster
+```
+
+Deploy the workflow:
+
+```bash
+snakedeploy deploy-workflow https://github.com/leightonpayne/mmseqs-cluster .
 ```
 
 ## Configuration
