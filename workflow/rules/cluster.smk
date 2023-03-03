@@ -1,23 +1,6 @@
-rule seqkit_rmdup:
-    input:
-        lambda wildcards: pep.sample_table.at[wildcards.protein, "file_path"],
-    output:
-        "results/fasta_filtered/{protein}.faa",
-    log:
-        "logs/seqkit_rmdup/{protein}.log",
-    params:
-        "--threads {params.threads}",
-        "--by-seq",
-        "--dup-num-file results/fasta_filtered/{protein}_seqkit_duplicates.txt",
-        "--dup-seqs-file results/fasta_filtered/{protein}_seqkit_duplicates.faa",
-    threads: config["seqkit_rmdup"]["threads"]
-    wrapper:
-        "https://raw.githubusercontent.com/leightonpayne/snakemake-wrappers/master/seqkit/rmdup/wrapper.py"
-
-
 rule mmseqs_createdb:
     input:
-        "results/fasta_filtered/{protein}.faa",
+        "results/fasta_filtered/{protein}/{protein}.faa",
     output:
         "results/database_sequences/{protein}/{protein}.db",
     log:

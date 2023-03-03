@@ -19,6 +19,7 @@ pepschema: "schemas/pep.yaml"
 # load rules
 
 
+include: "rules/rmdup.smk"
 include: "rules/cluster.smk"
 
 
