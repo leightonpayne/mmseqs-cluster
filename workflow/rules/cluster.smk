@@ -6,7 +6,11 @@ rule seqkit_rmdup:
     log:
         "logs/seqkit_rmdup/{protein}.log",
     params:
-        by="sequence",
+        "--threads {params.threads}",
+        "--by-seq",
+        "--dup-num-file results/fasta_filtered/{protein}_seqkit_duplicates.txt",
+        "--dup-seqs-file results/fasta_filtered/{protein}_seqkit_duplicates.faa",
+    threads: config["seqkit_rmdup"]["threads"]
     wrapper:
         "https://raw.githubusercontent.com/leightonpayne/snakemake-wrappers/master/seqkit/rmdup/wrapper.py"
 

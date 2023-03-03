@@ -1,3 +1,8 @@
+# Parameters for removing duplicates with seqkit.
+seqkit_rmdup:
+  # --threads; Number of CPUs.
+  threads: 4
+
 # Parameters for clustering with MMseqs2.
 mmseqs_cluster:
   # --min-seq-id; List matches above this sequence identity (for clustering)
