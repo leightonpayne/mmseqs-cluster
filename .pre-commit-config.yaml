@@ -3,3 +3,4 @@ repos:
     rev: v0.8.1
     hooks:
       - id: snakefmt
+
