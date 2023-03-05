@@ -31,5 +31,5 @@ jobs:
       
       - name: Run snakemake
         run: |
-          snakemake --directory .test --snakefile workflow/Snakefile --cores 2 --show-failed-logs --use-conda --conda-cleanup-pkgs cache
+          snakemake --cores 2 --show-failed-logs --use-conda --conda-cleanup-pkgs cache
 
