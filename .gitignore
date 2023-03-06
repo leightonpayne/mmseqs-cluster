@@ -3,4 +3,5 @@
 results/*
 logs/*
 deploy/*
+commitlint.config.js
 
