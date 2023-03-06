@@ -1,3 +1,5 @@
+<img src="https://avatars.githubusercontent.com/u/33450111?s=200&v=4" alt="Snakemake logo" title="Snakemake" align="right" height="96" width="96"/>
+
 # mmseqs-cluster
 
 [![Snakemake](https://img.shields.io/badge/snakemake-7.19.1-brightgreen.svg?style=flat)](https://snakemake.readthedocs.io)
