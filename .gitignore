@@ -1,0 +1,6 @@
+._*
+.snakemake
+results/*
+logs/*
+deploy/*
+
